@@ -1,3 +1,6 @@
+#Because of clean package do not need target-directory
+target/
+
 # Compiled class file
 *.class
 
