@@ -4,29 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestMain {
-    
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
 
     @Test
-    public void out() {
+    public void printHelloWorld() {
+        final PrintStream standardOut = System.out;
+        final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
         Main.main(null);
-        assertEquals("Hello World!"+System.lineSeparator(), outputStreamCaptor.toString());
-    }
-    
-    @AfterEach
-    public void tearDown() {
+        assertEquals("Hello World!" + System.lineSeparator(), outputStreamCaptor.toString());
         System.setOut(standardOut);
     }
 
