@@ -6,11 +6,9 @@ public class Contact{
 	private String phoneNumber;
 
 	public Contact(String name, String email, String phoneNumber) {
-
-		this.name = name.trim();
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+		setName(name);
 	}
 
 	public String getName() {
@@ -18,10 +16,9 @@ public class Contact{
 	}
 
 	public void setName(String name) {
-		
-		if(name.matches("[a-zA-Z]+")){
-			throw new IllegalArgumentException("Endast bokstäver a-z är tillåtna");
-		}
+	    if(!isAlphaOrSpace(name)) {
+	            throw new IllegalArgumentException("Endast bokstäver och mellanslag är tillåtna");
+	    }
 		
 		this.name = name.trim();
 	}
@@ -41,5 +38,17 @@ public class Contact{
 	public void setPhoneNumber(String phoneNumber) {
 		
 		this.phoneNumber = phoneNumber;
+	}
+	
+	private boolean isAlphaOrSpace(String name) {
+	    char[] chars = name.toCharArray();
+
+	    for (char c : chars) {
+	        if(!Character.isLetter(c) && c != ' ') {
+	            return false;
+	        }
+	    }
+
+	    return true;
 	}
 }
