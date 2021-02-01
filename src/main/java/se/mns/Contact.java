@@ -1,4 +1,4 @@
-package se.mns
+package se.mns;
 
 public class Contact{
 	private String name;
@@ -33,7 +33,7 @@ public class Contact{
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 }
