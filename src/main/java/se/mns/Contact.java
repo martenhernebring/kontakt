@@ -1,3 +1,5 @@
+package se.mns
+
 public class Contact{
 	private String name;
 	private String email;
