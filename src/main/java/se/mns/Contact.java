@@ -1,9 +1,9 @@
 public class Contact{
 	private String name;
 	private String email;
-	private int phoneNumber;
+	private String phoneNumber;
 
-	public Contact(String name, String email, int phoneNumber) {
+	public Contact(String name, String email, String phoneNumber) {
 
 		this.name = name.trim();
 		this.email = email;
@@ -27,7 +27,7 @@ public class Contact{
 		this.email = email;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
