@@ -19,13 +19,19 @@ public class Contact{
 
 	public void setName(String name) {
 		this.name = name.trim();
+		
+		if(name.matches("[a-zA-Z]+")){
+			throw new IllegalArgumentException("Endast bokstäver a-z är tillåtna");
+		}
+		
+		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmail() {		return email;
 	}
 
 	public void setEmail(String email) {
+		
 		this.email = email;
 	}
 
@@ -34,6 +40,7 @@ public class Contact{
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
+		
 		this.phoneNumber = phoneNumber;
 	}
 }
