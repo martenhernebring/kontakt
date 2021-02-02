@@ -11,10 +11,13 @@ public class ContactBook {
 		contacts = new ArrayList<>();
 	}
 	
+	public List<Contact> getContacts() {
+		return contacts;
+	}
+	
 	public void add(Contact contact) {
 		contacts.add(contact);
 	}
-	
 	
 	public void remove(String name) {
 		for(int i = 0; i<contacts.size();i++){
