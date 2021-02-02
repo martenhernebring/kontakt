@@ -11,35 +11,31 @@ public class ContactBook {
 		contacts = new ArrayList<>();
 	}
 	
+	public List<Contact> getContacts() {
+		return contacts;
+	}
+	
 	public void add(Contact contact) {
 		contacts.add(contact);
 	}
 	
-	public void remove(Contact contact) {
-		contacts.remove(contact);
+	public void remove(String name) {
+		for(int i = 0; i<contacts.size();i++){
+			if(contacts.get(i).getName().equals(name)) {
+				contacts.remove(i);
+			} else {
+				throw new IllegalArgumentException();
+			}	
+		}
 	}
 	
-	//It is okay that this only responds "Found" and "Not found"?
-	public boolean contains(Contact contact) {
+	public boolean contains(String name) {
 		for(int i = 0; i<contacts.size();i++) {
-			if(contacts.get(i).equals(contact)) {
+			if(contacts.get(i).getName().equals(name)) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
-	/* ToDo
-	public void edit(Contact c) {
-		if(!findContact(c)) {
-			throw new IllegalArgumentException("The contact is not found.");
-		}
-		
-		c.setName();
-		c.setTelephoneNumber();
-		c.setEmail();
-		
-	}*/
-
 	
 }
