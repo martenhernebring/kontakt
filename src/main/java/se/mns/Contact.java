@@ -6,9 +6,10 @@ public class Contact{
 	private String phoneNumber;
 
 	public Contact(String name, String email, String phoneNumber) {
-        this.email = email;
+        
         this.phoneNumber = phoneNumber;
 		setName(name);
+		setEmail(email);
 	}
 
 	public String getName() {
@@ -16,18 +17,22 @@ public class Contact{
 	}
 
 	public void setName(String name) {
-	    if(!isAlphaOrSpace(name)) {
-	            throw new IllegalArgumentException("Endast bokstäver och mellanslag är tillåtna");
-	    }
-		
+		if(!isAlphaOrSpace(name)) {
+			throw new IllegalArgumentException("Endast bokstäver och mellanslag är tillåtna");
+		}
+
 		this.name = name.trim();
 	}
 
-	public String getEmail() {		return email;
+	public String getEmail() {		
+		return email;
 	}
 
 	public void setEmail(String email) {
-		
+		if(!containsAtmark(email)) 
+		{
+			throw new IllegalArgumentException("E-post måste innehålla @(snabel-a)");
+		}
 		this.email = email;
 	}
 
@@ -36,7 +41,9 @@ public class Contact{
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
-		
+		if(isAlphaOrSpace(phoneNumber)) {
+			throw new IllegalArgumentException("Endast siffor och mellanslag är tillåtna");
+		}
 		this.phoneNumber = phoneNumber;
 	}
 	
@@ -50,5 +57,14 @@ public class Contact{
 	    }
 
 	    return true;
+	}
+	
+	private boolean containsAtmark(String email) {
+		
+		if(!email.contains("@")) {
+			return false;
+		}
+		
+		return true;
 	}
 }
