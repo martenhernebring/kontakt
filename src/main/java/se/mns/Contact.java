@@ -18,7 +18,7 @@ public class Contact{
 
 	public void setName(String name) {
 		if(!isAlphaOrSpace(name)) {
-			throw new IllegalArgumentException("Endast bokstäver och mellanslag är tillåtna");
+			throw new IllegalArgumentException("Skriv in namnet endast med bokstäver och mellanslag.");
 		}
 
 		this.name = name.trim();
@@ -41,8 +41,9 @@ public class Contact{
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
-		if(isAlphaOrSpace(phoneNumber)) {
-			throw new IllegalArgumentException("Endast siffor och mellanslag är tillåtna");
+		
+		if(isAlphaOrSpace(phoneNumber.trim())) {
+			throw new IllegalArgumentException("Skriv in ditt telefonnummer med enbart siffror.");
 		}
 		this.phoneNumber = phoneNumber;
 	}
@@ -67,4 +68,5 @@ public class Contact{
 		
 		return true;
 	}
+	
 }
