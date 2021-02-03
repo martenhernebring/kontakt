@@ -55,7 +55,7 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.white);
 
-        pack();
+        setSize(400,400);
 
         addButton.addActionListener(this);
         removeButton.addActionListener(this);
