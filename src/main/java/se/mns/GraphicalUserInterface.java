@@ -56,11 +56,11 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.white);
 
-        pack();
-
         nameText.addActionListener(this);
         emailText.addActionListener(this);
         telephoneText.addActionListener(this);
+
+        setSize(800,400);
 
         quitButton.addActionListener(this);
         addButton.setEnabled(true);
