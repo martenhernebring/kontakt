@@ -13,6 +13,9 @@ public class ContactBook {
 	
 	private List<Contact> contacts;
 	
+	/**
+	 * Creates an empty list.
+	 */
 	public ContactBook() {
 		contacts = new ArrayList<>();
 	}
