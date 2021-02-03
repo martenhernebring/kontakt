@@ -11,10 +11,10 @@ Det här är ett litet program som skapar en kontaktbok som innehåller namn, te
 ### Köra programmet
 
 Hur man startar programmet:
-1... 
-2...
-3...
-4...
+1. Ladda ner jar-fil
+2. Öppna valfri terminal
+3. Gå till downloads 
+4. Skriv "java -jar .\kontakt-0.0.1-SNAPSHOT.jar" så körs programmet automatiskt
 
 #### Beskrivning av programmet
 
