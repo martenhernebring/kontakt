@@ -1,7 +1,5 @@
 package se.mns;
 
-import java.util.ArrayList;
-import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -43,7 +41,6 @@ class TestContactBook {
 		});
 	}
 	
-	//testar om contains() fungerar
 	@Test
 	public void testContainsTrue() {
 		assertTrue(contactBook.contains("TestName"));
@@ -53,6 +50,5 @@ class TestContactBook {
 	public void testContainsFalse() {
 		assertFalse(contactBook.contains("NonExistingName"));
 	}
-	
 	
 }
