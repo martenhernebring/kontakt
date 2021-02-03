@@ -7,7 +7,7 @@ public class Contact{
 
 	public Contact(String name, String email, String phoneNumber) {
         
-        this.phoneNumber = phoneNumber;
+        setPhoneNumber(phoneNumber);
 		setName(name);
 		setEmail(email);
 	}
