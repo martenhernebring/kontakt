@@ -18,10 +18,10 @@ import javax.swing.JFrame;
  */
 public class Menu extends JFrame implements ActionListener {
 
-    JButton addButton = new JButton("Lägg till");
-    JButton removeButton = new JButton("Ta bort");
-    JButton searchButton = new JButton("Sök");
-    JButton quitButton = new JButton("Avsluta");
+    private JButton addButton = new JButton("Lägg till");
+    private JButton removeButton = new JButton("Ta bort");
+    private JButton searchButton = new JButton("Sök");
+    private JButton quitButton = new JButton("Avsluta");
 
     /**
      * Required by Eclipse
@@ -40,7 +40,7 @@ public class Menu extends JFrame implements ActionListener {
         removeButton.setEnabled(false);
         searchButton.setEnabled(false);
         quitButton.setEnabled(true);
-        setSize(400,400);
+        pack();
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
