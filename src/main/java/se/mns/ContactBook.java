@@ -1,6 +1,7 @@
 package se.mns;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ContactBook {
@@ -12,7 +13,7 @@ public class ContactBook {
 	}
 	
 	public List<Contact> getContacts() {
-		return contacts;
+		return Collections.unmodifiableList(contacts);
 	}
 	
 	public void add(Contact contact) {
