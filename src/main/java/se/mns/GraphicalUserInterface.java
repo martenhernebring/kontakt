@@ -9,7 +9,6 @@ import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GraphicalUserInterface extends JFrame implements ActionListener {
@@ -24,29 +23,21 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
     private JLabel nameLabel = new JLabel("För och efternamn:", JLabel.RIGHT);
     private JLabel emailLabel = new JLabel("Email (med @):", JLabel.RIGHT);
     private JLabel telephoneLabel = new JLabel("Telefon:", JLabel.RIGHT);
-    //private JPanel contact = new JPanel();
 
     private JButton addButton = new JButton("Lägg till");
     private JButton removeButton = new JButton("Ta bort");
     private JButton searchButton = new JButton("Sök");
     private JButton quitButton = new JButton("Avsluta");
-    //private JPanel buttons = new JPanel();
 
     private ContactBook contacts = new ContactBook();
     private String name = "";
     
     private JLabel message = new JLabel("");
     private JLabel error = new JLabel("");
-    //private JPanel interaction = new JPanel();
 
     public GraphicalUserInterface() {
-        setLayout(new GridLayout(6, 2)); // 3 rader 1 kolumner
-        //add(contact); // översta
-        //add(buttons); // mellersta
-        //add(interaction); //understa
+        setLayout(new GridLayout(6, 2)); // 6 rader 2 kolumner
 
-        // översta
-        //contact.setLayout(new GridLayout(3, 2)); // 3 r 2 k
         add(nameLabel);
         add(nameText);
         add(emailLabel);
@@ -54,13 +45,11 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
         add(telephoneLabel);
         add(telephoneText);
 
-        // mellersta
         add(searchButton);
         add(addButton);
         add(removeButton);
         add(quitButton);
         
-        //understa
         add(message);
         add(error);
 
@@ -89,11 +78,18 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
         } else if (e.getSource() == addButton) {
             scanName();
             Scanner scan = new Scanner(emailText.getText());
-            String email = scan.nextLine();
+            String email = "";
+            if(scan.hasNextLine()){
+              email = scan.nextLine();
+            }
             scan.close();
             emailText.setText("");
             scan = new Scanner(telephoneText.getText());
-            String phone = scan.nextLine();
+            String phone = "";
+            if(scan.hasNextLine()){
+              phone = scan.nextLine();
+            }
+            scan.close();
             telephoneText.setText("");
             Contact contact = null;
             try {
@@ -121,7 +117,9 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
     
     private void scanName() {
         Scanner scan = new Scanner(nameText.getText());
-        name = scan.nextLine();
+        if(scan.hasNextLine()){
+          name = scan.nextLine();
+        }
         scan.close();
         nameText.setText("");
     }

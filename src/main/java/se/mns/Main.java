@@ -3,8 +3,6 @@
  */
 package se.mns;
 
-import javax.swing.JFrame;
-
 /**
  * @author Mårten Hernebring
  * @version 3
