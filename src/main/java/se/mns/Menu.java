@@ -18,6 +18,10 @@ import javax.swing.JFrame;
  */
 public class Menu extends JFrame implements ActionListener {
 
+    JButton addButton = new JButton("Lägg till");
+    JButton removeButton = new JButton("Ta bort");
+    JButton searchButton = new JButton("Sök");
+    JButton quitButton = new JButton("Avsluta");
 
     /**
      * Required by Eclipse
@@ -25,12 +29,17 @@ public class Menu extends JFrame implements ActionListener {
     private static final long serialVersionUID = -732393840433299028L;
 
     public Menu() {
-        setLayout(new GridLayout(1,1));
-        JButton addButton = new JButton("Lägg till");
+        setLayout(new GridLayout(2,2));
         add(addButton);
+        add(removeButton);
+        add(searchButton);
+        add(quitButton);
         getContentPane().setBackground(Color.white);
-        addButton.addActionListener(this);
+        quitButton.addActionListener(this);
         addButton.setEnabled(false);
+        removeButton.setEnabled(false);
+        searchButton.setEnabled(false);
+        quitButton.setEnabled(true);
         setSize(400,400);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -38,8 +47,10 @@ public class Menu extends JFrame implements ActionListener {
     
     //knapplyssnare
     @Override
-    public void actionPerformed(ActionEvent arg0) {
-        // TODO Auto-generated method stub
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == quitButton) {
+            System.exit(0);
+        }
     }
 
 }
