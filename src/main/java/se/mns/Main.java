@@ -1,5 +1,5 @@
 /**
- * 
+ * Simple main creating the GUI
  */
 package se.mns;
 
@@ -11,6 +11,7 @@ package se.mns;
 
 public class Main {
     
+  /**Only a GUI is created */
     @SuppressWarnings("unused")
     public static void main(String[] args) {
       var  gui = new GraphicalUserInterface();  
