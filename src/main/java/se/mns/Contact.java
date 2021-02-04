@@ -1,5 +1,13 @@
 package se.mns;
 
+
+/**
+ * This is a Contact class, in which contacts can be added with a name, email and a phone number.
+ * 
+ * @author suzanatrajcevska
+ * 
+ * 
+ */
 public class Contact{
 	private String name;
 	private String email;
@@ -11,7 +19,10 @@ public class Contact{
 		setName(name);
 		setEmail(email);
 	}
-
+/**
+ * A name is added in the contact
+ * @return
+ */
 	public String getName() {
 		return name;
 	}
@@ -23,7 +34,10 @@ public class Contact{
 
 		this.name = name.trim();
 	}
-
+/**
+ * A email is added 
+ * @return
+ */
 	public String getEmail() {		
 		return email;
 	}
@@ -35,7 +49,10 @@ public class Contact{
 		}
 		this.email = email;
 	}
-
+/**
+ * A phone number is added
+ * @return
+ */
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -47,7 +64,11 @@ public class Contact{
 		}
 		this.phoneNumber = phoneNumber;
 	}
-	
+	/**
+	 * 
+	 * @param name should only be written with letters
+	 * @return
+	 */
 	private boolean isAlphaOrSpace(String name) {
 	    char[] chars = name.toCharArray();
 
@@ -59,7 +80,11 @@ public class Contact{
 
 	    return true;
 	}
-	
+	/**
+	 * 
+	 * @param email should contain a @
+	 * @return
+	 */
 	private boolean containsAtmark(String email) {
 		
 		if(!email.contains("@")) {
