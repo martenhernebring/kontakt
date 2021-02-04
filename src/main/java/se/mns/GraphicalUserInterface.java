@@ -16,10 +16,8 @@ import javax.swing.JTextField;
  * @author Mårten Hernebring
  * @version 3
  */
-
 public class GraphicalUserInterface extends JFrame implements ActionListener {
 
-<<<<<<< HEAD
   /**
    * Required by Eclipse
    */
@@ -145,66 +143,7 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
       } else {
         message.setText("Kontakten finns ej");
       }
-
-    /**
-     * Required by Eclipse
-     */
-    private static final long serialVersionUID = -8540673446737735816L;
-    private JTextField nameText = new JTextField(30);
-    private JTextField emailText = new JTextField(30);
-    private JTextField telephoneText = new JTextField(30);
-    private JLabel nameLabel = new JLabel("För och efternamn:", JLabel.RIGHT);
-    private JLabel emailLabel = new JLabel("Email (med @):", JLabel.RIGHT);
-    private JLabel telephoneLabel = new JLabel("Telefon:", JLabel.RIGHT);
-    private JPanel contact = new JPanel();
-
-    private JButton addButton = new JButton("Lägg till");
-    private JButton removeButton = new JButton("Ta bort");
-    private JButton searchButton = new JButton("Sök");
-    private JButton quitButton = new JButton("Avsluta");
-    private JPanel buttons = new JPanel();
-
-    private ContactBook contacts = new ContactBook();
-
-    public GraphicalUserInterface() {
-        setLayout(new GridLayout(2, 1)); // 2 rader 1 kolumner
-        add(contact); // översta
-        add(buttons); // understa
-
-        // övre halvan
-        contact.setLayout(new GridLayout(3, 2)); // 3 r 2 k
-        contact.add(nameLabel);
-        contact.add(nameText);
-        contact.add(emailLabel);
-        contact.add(emailText);
-        contact.add(telephoneLabel);
-        contact.add(telephoneText);
-
-        // undre halvan
-        buttons.add(searchButton);
-        buttons.add(addButton);
-        buttons.add(removeButton);
-        buttons.add(quitButton);
-
-        getContentPane().setBackground(Color.white);
-
-        nameText.addActionListener(this);
-        emailText.addActionListener(this);
-        telephoneText.addActionListener(this);
-
-        setSize(800,400);
-
-        quitButton.addActionListener(this);
-        addButton.setEnabled(true);
-        removeButton.setEnabled(false);
-        searchButton.setEnabled(false);
-        quitButton.setEnabled(true);
-
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
     }
-
   }
 
   private void scanName() {
