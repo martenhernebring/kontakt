@@ -65,7 +65,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-					<javadocExecutable>/usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc</javadocExecutable>
+					<javadocExecutable>C:\Program Files\Java\jdk-11.0.10\bin\javadoc</javadocExecutable>
 				</configuration>
 			</plugin>
 		</plugins>

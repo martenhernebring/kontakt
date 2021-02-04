@@ -5,14 +5,17 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+/** Creates a GUI with name, email and phone fields, 4 buttons, 3 static and 2 dynamics labels
+ * @author Mårten Hernebring
+ * @version 3
+ */
 
 public class GraphicalUserInterface extends JFrame implements ActionListener {
 
@@ -38,9 +41,11 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
   private JLabel message = new JLabel("");
   private JLabel error = new JLabel("");
 
+  /**Creates 6 x 2 grid with fields, buttons and dynamic labels */
   public GraphicalUserInterface() {
-    setLayout(new GridLayout(6, 2)); // 6 rader 2 kolumner
+    setLayout(new GridLayout(6, 2));
 
+    //3 x 2 contact data
     add(nameLabel);
     add(nameText);
     add(emailLabel);
@@ -48,11 +53,13 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
     add(telephoneLabel);
     add(telephoneText);
 
+    //2 x 2 GUI buttons
     add(searchButton);
     add(addButton);
     add(removeButton);
     add(quitButton);
 
+    //1 x 2 event labels
     add(message);
     add(error);
 
@@ -72,31 +79,12 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
     message.setFont(font);
     error.setFont(font);
 
-    //For testing
+    //Required by AssertJSwingJUnitTestCase in TestGUI
     nameText.setName("nameText");
     addButton.setName("addButton");
     error.setName("error");
 
     setSize(800, 400);
-    addMouseListener(new MouseListener() {
-      public void mousePressed(MouseEvent me) {
-      }
-
-      public void mouseReleased(MouseEvent me) {
-      }
-
-      public void mouseEntered(MouseEvent me) {
-      }
-
-      public void mouseExited(MouseEvent me) {
-      }
-
-      public void mouseClicked(MouseEvent me) {
-        int x = me.getX();
-        int y = me.getY();
-        message.setText("X:" + x + " Y:" + y);
-      }
-    });
 
     addButton.addActionListener(this);
     removeButton.addActionListener(this);
@@ -112,6 +100,9 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
     setDefaultCloseOperation(EXIT_ON_CLOSE);
   }
 
+  /**If user clicks quit, add, remove or search this method will be called
+   * @param e Trigged by a user or artificial button-click in GUI
+   */
   @Override
   public void actionPerformed(ActionEvent e) {
     if (e.getSource() == quitButton) {
