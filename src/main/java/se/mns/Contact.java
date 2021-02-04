@@ -1,6 +1,7 @@
 package se.mns;
 
 
+
 /**
  * This is a Contact class, in which contacts can be added with a name, email and a phone number.
  * 
@@ -98,5 +99,3 @@ public class Contact{
 
 		return true;
 	}
-
-}
