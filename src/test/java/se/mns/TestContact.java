@@ -8,7 +8,6 @@ public class TestContact {
 
 	Contact contact= new Contact("Naoya", "naoya@testemail.com", "07342567");
 	
-	
 
 	@Test
 	public void testEqualsName() {
