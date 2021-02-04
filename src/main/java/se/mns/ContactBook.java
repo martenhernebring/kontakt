@@ -22,7 +22,7 @@ public class ContactBook {
 	
 	/**
 	 * Returns the list
-	 * @return List<Contact> 
+	 * @return Collections.unmodifiableList(contacts)
 	 */
 	public List<Contact> getContacts() {
 		return Collections.unmodifiableList(contacts);
