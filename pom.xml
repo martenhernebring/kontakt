@@ -20,7 +20,14 @@
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>5.7.0</version>
 			<scope>test</scope>
-		</dependency>
+    </dependency>
+      <!-- https://mvnrepository.com/artifact/org.assertj/assertj-swing-junit -->
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-swing-junit</artifactId>
+      <version>3.17.1</version>
+      <scope>test</scope>
+    </dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -58,7 +65,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-					<javadocExecutable>/usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc</javadocExecutable>
+					<javadocExecutable>C:\Program Files\Java\jdk-11.0.10\bin\javadoc</javadocExecutable>
 				</configuration>
 			</plugin>
 		</plugins>
