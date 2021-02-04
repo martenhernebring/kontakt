@@ -8,7 +8,17 @@ Contact book
 
 Det här är ett litet program som skapar en kontaktbok som innehåller namn, telefonnummer och e-postaddress.
 
-### Köra programmet
+### Klona och köra programmet
+
+Hur man startar programmet:
+1. Klona i terminal genom kommando "git clone https://github.com/martenhernebring/kontakt.git"
+2. I terminal "cd kontakt"
+3. Se till att Maven är installerat
+4. I terminal "mvn package"
+5. I terminal "cd target"
+4. Skriv "java -jar .\kontakt-0.0.1-SNAPSHOT.jar" så körs programmet automatiskt
+
+### Köra programmet med en Jar-fil från Jenkins
 
 Hur man startar programmet:
 1. Ladda ner jar-fil
