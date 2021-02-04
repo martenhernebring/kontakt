@@ -13,7 +13,7 @@ public class Main {
     
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        var gui = new GraphicalUserInterface();
+      var  gui = new GraphicalUserInterface();  
     }
 
 }

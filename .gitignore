@@ -2,6 +2,10 @@
 target/
 #Eclipse files
 .settings/
+
+#VSCode files
+.vscode/
+
 # Compiled class file
 *.class
 
