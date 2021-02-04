@@ -11,7 +11,9 @@ package se.mns;
 
 public class Main {
     
-  /**Only a GUI is created */
+  /**Only a GUI is created
+   * @param args not used
+   */
     @SuppressWarnings("unused")
     public static void main(String[] args) {
       var  gui = new GraphicalUserInterface();  
