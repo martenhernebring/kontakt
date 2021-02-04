@@ -16,10 +16,9 @@ import javax.swing.JTextField;
  * @author Mårten Hernebring
  * @version 3
  */
-
 public class GraphicalUserInterface extends JFrame implements ActionListener {
 
-  /**
+/**
    * Required by Eclipse
    */
   private static final long serialVersionUID = -8540673446737735816L;
@@ -144,8 +143,6 @@ public class GraphicalUserInterface extends JFrame implements ActionListener {
       } else {
         message.setText("Kontakten finns ej");
       }
-    }
-
   }
 
   private void scanName() {
